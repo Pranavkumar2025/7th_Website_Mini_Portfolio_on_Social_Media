@@ -1,0 +1,263 @@
+/* ---ON MAKING EVERY WEBSITE THIS TERM IS COMMONLY USED----- */
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Noto+Serif+Telugu:wght@200;400&family=Poppins:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+    --padding-inline-section:20px;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-text-color);
+}
+
+h1{
+    font-size: 5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.5rem ;
+}
+
+p{
+    font-family: 'Roboto',sans-serif;
+    font-size: 1.25rem;
+    color: var(--secondary-text-color);
+    line-height: 1.8rem;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+nav{
+    background-color: #f3faff;
+    box-shadow: 0 0 4px #bbd0e2;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+} 
+main{
+    padding-block: 20px;
+    margin-top: 80px;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+/* MY CSSS which is used for practice purpose */
+  
+  body {
+    display: flex; 
+    justify-content: center;
+    background: #000;
+    /* overflow: hidden; */
+  }
+  
+  .glowing {
+    position: relative;
+    /* min-width: 700px; */
+    width: 500px;
+    height: 400px;
+    margin: -150px;
+    transform-origin: right;
+    animation: colorChange 5s linear infinite;
+  }
+  
+  .glowing:nth-child(even) {
+    transform-origin: left;
+  }
+  
+  @keyframes colorChange {
+    0% {
+      filter: hue-rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  .glowing span {
+    position: absolute;
+    top: calc(80px * var(--i));
+    left: calc(80px * var(--i));
+    bottom: calc(80px * var(--i));
+    right: calc(80px * var(--i));
+  }
+  
+  .glowing span::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    width: 15px;
+    height: 15px;
+    background: #f00;
+    border-radius: 50%;
+  }
+  
+  .glowing span:nth-child(3n + 1)::before {
+    background: rgba(134,255,0,1);
+    box-shadow: 0 0 20px rgba(134,255,0,1),
+      0 0 40px rgba(134,255,0,1),
+      0 0 60px rgba(134,255,0,1),
+      0 0 80px rgba(134,255,0,1),
+      0 0 0 8px rgba(134,255,0,.1);
+  }
+  
+  .glowing span:nth-child(3n + 2)::before {
+    background: rgba(255,214,0,1);
+    box-shadow: 0 0 20px rgba(255,214,0,1),
+      0 0 40px rgba(255,214,0,1),
+      0 0 60px rgba(255,214,0,1),
+      0 0 80px rgba(255,214,0,1),
+      0 0 0 8px rgba(255,214,0,.1);
+  }
+  
+  .glowing span:nth-child(3n + 3)::before {
+    background: rgba(0,226,255,1);
+    box-shadow: 0 0 20px rgba(0,226,255,1),
+      0 0 40px rgba(0,226,255,1),
+      0 0 60px rgba(0,226,255,1),
+      0 0 80px rgba(0,226,255,1),
+      0 0 0 8px rgba(0,226,255,.1);
+  }
+  
+  .glowing span:nth-child(3n + 1) {
+    animation: animate 10s alternate infinite;
+  }
+  
+  .glowing span:nth-child(3n + 2) {
+    animation: animate-reverse 3s alternate infinite;
+  }
+  
+  .glowing span:nth-child(3n + 3) {
+    animation: animate 8s alternate infinite; 
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: rotate(180deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes animate-reverse {
+    0% {
+      transform: rotate(360deg);
+    }
+    
+    50% {
+      transform: rotate(180deg);
+    }
+    
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+/* Now media container section */
+.media-section{
+  position: absolute;
+}
+.media-container{
+  /* border: 5px solid yellowgreen; */
+  width: 80vw;
+  height: 120vh;
+  text-align: center;
+  flex-direction: column;
+  /* justify-content: space-between; */
+
+}
+/* Text desigin */
+
+.media-txt{
+  font-size: 6rem;
+  color: white;
+}
+
+
+/* ----------------- Text Background Animation section ----------------- */
+.media-txt {
+  /* height: 100vh;
+  width: 100vw; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.media-txt h1{
+  margin: 0;
+  font-size: 6rem;
+  color: rgba(225,225,225, .01);
+  background-image: url("mona-eendra-Ru6hBXxVph8-unsplash.jpg");
+  background-repeat: repeat;
+  -webkit-background-clip:text;
+  animation: animate 15s ease-in-out infinite;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+  @keyframes animate {
+    0%, 100% {
+      background-position: left top;
+    }
+    25%{
+      background-position: right bottom;
+     }
+    50% {
+      background-position: left bottom;
+    }
+    75% {
+      background-position: right top;
+    }   
+}
+/* ---------------------------End of the Program----------------------- */
+
+
+.media-logo-box{
+  /* border: 3px solid palevioletred; */
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.box{
+  width: 300px;
+  height: 300px;
+  border: 5px solid rgb(239, 37, 202);
+  margin: 5px;
+  border-radius: 50%;
+  transition: all .8s ease;
+}
+.box:hover{
+  transform: scale(1.1, 1.1);
+}
+.box img{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+

@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Noto+Serif+Telugu:wght@200;400&family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+    --padding-inline-section: 20px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-text-color);
+    background-color: black;
+}
+
+h1 {
+    font-size: 3rem;
+    color: whitesmoke;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    /* color: whitesmoke;
+     */
+     color: plum;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    color: var(--secondary-text-color);
+    line-height: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    position: relative;
+    font-weight: 500;
+    z-index: 100;
+}
+
+li {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+/* My css desigin section */
+.main-container{
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    gap: 20px;
+    /* flex-wrap: wrap; */
+}
+.container-1{
+    flex-direction: column;
+    gap: 5px;
+}
+.img-box{
+    border: 6px solid rgb(240, 15, 214);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: url("logo_myPicjpg.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: all 1s ease;
+}
+.img-box:hover{
+    transform: scale(1.1,1.1);
+}
+
+.container-2{
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: center;
+    gap: 20px;
+}
+.box{
+    width: 400px;
+    height: 550px;
+    margin: 10px;
+    border: 3px solid rgb(241, 237, 237);
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    border: 7px solid rgb(240, 15, 214);
+    border-radius: 12px;
+    transition: all 1s ease;
+}
+.box:hover{
+    /* border: pink; */
+  
+    transform: scale(1.06,1.06);
+}
+.mini-box{
+    width: 375px;
+    height: 400px;
+    border: 3px solid salmon;
+    border-radius: 4px;
+}
+.box a{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 9px;
+    width: 120px;
+    text-align: center;
+}
+.box a:hover{
+    background-color: white;
+    color: black;
+    border:3px solid rgb(240, 15, 214);
+}
+#mini-box1{
+    background: url("Screenshot\ \(75\).png");
+    background-size: cover;
+    background-position: center;
+    
+}
+#mini-box2{
+    background: url("Screenshot\ \(81\).png");
+    background-size: cover;
+    background-position: center;
+    
+}
+#mini-box3{
+    background: url("Screenshot\ \(76\).png");
+    background-size: cover;
+    background-position: left;
+    
+}
+#mini-box4{
+    background: url("Screenshot\ \(80\).png");
+    background-size: cover;
+    background-position: left;
+    
+}
+#mini-box5{
+    background: url("Screenshot\ \(77\).png");
+    background-size: cover;
+    background-position: left;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+/* for Resonsive------------------------ */
+
+@media screen and (max-width: 860px) {
+    .box{
+        width: 360px;
+    }
+    .mini-box{
+        width: 330px;
+    }
+    
+}

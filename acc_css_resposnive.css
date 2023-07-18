@@ -1,0 +1,27 @@
+
+
+
+@media screen and (max-width:774px) {
+    .box{
+        width: 250px;
+        height: 250px;
+    }
+    .box img{
+        width: 250px;
+        height: 250px;
+    }
+    
+}
+@media screen and (max-width: 440px){
+    .media-txt h1{
+        font-size: 5rem;
+    }
+    .box{
+        width: 200px;
+        height: 200px;
+    }
+    .box img{
+        width: 200px;
+        height: 200px;
+    }
+}

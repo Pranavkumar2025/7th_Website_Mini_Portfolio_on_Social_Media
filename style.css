@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Noto+Serif+Telugu:wght@200;400&family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+    --padding-inline-section: 20px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-text-color);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    color: var(--secondary-text-color);
+    line-height: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    position: relative;
+    font-weight: 500;
+    z-index: 100;
+}
+
+li {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+/* my css */
+.head{
+    /* border: 2px solid blue; */
+    position: fixed;
+    width: 100%;
+    padding: 25px 12.5%;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+}
+.head-box ul li{
+    padding: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    margin-right: 30px;
+    color: white;
+}
+.head-box ul li::after{
+    content: " ";
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -6px;
+    background: white;
+    transform: translateY(10px);
+    border-radius: 5px;
+    opacity: 0;
+    transition: .5s;
+}
+.head-box ul li:hover::after{
+    transform: translateY(0);
+    opacity: 1;
+    cursor: pointer;
+}
+.head-search-box{
+    border: 3px solid white;
+    height: 40px;
+    width: 240px;
+    border-radius: 10px;
+}
+.head-search-box ::placeholder{
+    color: white;
+}
+.head-search-box i{
+    color: white;
+    font-size: 400;
+}
+
+#search-box{
+    width: 200px;
+    height: 30px;
+    background: transparent;
+    color: white;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+}
+.main-section{
+    /* border: 2px solid red; */
+    height: 100vh;
+    width: 100%;
+    padding: 25px 12.5%;
+    align-items: center;
+    background: url("asset2.jpg") no-repeat ;
+    background-position: center;
+    background-size: cover;
+
+}
+.main-box{
+    height: 75vh;
+    margin-top: 90px;
+    background: url("asset.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+.main-box  #box-1{
+    /* border: 2px solid rebeccapurple; */
+    width: 57%;
+    height: 100%;
+}
+.main-box #box-2{
+    /* border: 2px solid greenyellow; */
+    width: 43%;
+    /* position: relative; */
+    height: 100%;
+    /* background-color: pink; */
+}
+.box{
+    flex-direction: column;
+    align-items: normal;
+    justify-content: space-between ;
+    padding: 25px;
+    padding-left: 55px;
+}
+
+.mbox-1 h1{
+    margin: 0;
+    font-size: 3rem;
+    color: rgba(225,225,225, .01);
+    background-image: url("mona-eendra-Ru6hBXxVph8-unsplash.jpg");
+    background-repeat: repeat;
+    -webkit-background-clip:text;
+    animation: animate 15s ease-in-out infinite;
+    /* text-align: center; */
+    /* text-transform: uppercase; */
+    font-weight: 900;
+  }
+  
+    @keyframes animate {
+      0%, 100% {
+        background-position: left top;
+      }
+      25%{
+        background-position: right bottom;
+       }
+      50% {
+        background-position: left bottom;
+      }
+      75% {
+        background-position: right top;
+      }   
+  }
+.mbox-2{
+    font-size: 25px;
+}
+.pic-box{
+    border: 2px solid black;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(to top left, rgb(159, 64, 247),rgb(250, 250, 110) );
+    transition: all 1s ease ;
+}
+.pic-box:hover{
+    transform: scale(1.2,1.2);
+
+}
+.pic-box span:nth-child(1){
+    filter: blur(10px);
+}
+.pic-box img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: auto;
+    border: 2px solid black;
+}
+
+#box-2{
+    display: flex;
+    justify-content: end;
+    align-items: normal;
+    /* margin-bottom: 20px; */
+}
+.mbox{
+    margin-bottom: 100px;
+    flex-direction: column;
+}
+.btn{
+    border-radius: 7px;
+    padding: 7px;
+    border: 2px solid black;
+    transition: all 1s ease;
+}
+.btn a{
+    color: black;
+}
+.btn a:hover{
+    color: white;
+}
+.btn:hover{
+    transform: scale(1.1,1.1);
+    background-color: black;
+    border: 3px solid white;
+}
+
+/* --------------------Style Animation on Text---------------------- */
+
+.pop-outin {
+    animation: 2s anim-popoutin ease infinite;
+  }
+  @keyframes anim-popoutin {
+    0% {
+      color: black;
+      /* transform: scale(0); */
+      opacity: 0;
+      text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    25% {
+      color: red;
+      transform: scale(1);
+      opacity: 1;
+      text-shadow: 3px 10px 5px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+      color: black;
+      transform: scale(1);
+      opacity: 1;
+      text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      /* animate nothing to add pause at the end of animation */
+      transform: scale(1);
+      opacity: 1;
+      text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+
+/* ---------------------------------End Style animation of text---------------- */
